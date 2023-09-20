@@ -1,4 +1,4 @@
-export const Questions = [
+export const questions = [
   {
     question: "Can I work on a project I started before the hackathon?",
     answer: "Yes, you can continue working on a project you started before the hackathon.",
@@ -19,4 +19,4 @@ export const Questions = [
     question: "What happens after the hackathon ends?",
     answer: "After the hackathon ends, you present, judges evaluate, and you can continue or explore new opportunities.",
   },
-]
+];
