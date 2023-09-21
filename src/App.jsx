@@ -4,6 +4,7 @@ import Intro from "./components/Intro"
 import Rules from "./components/Rules"
 import Judging from "./components/Judging"
 import FAQ from "./components/FAQ"
+import Timeline from "./components/Timeline"
 
 export default function App() {
   return(
@@ -14,6 +15,7 @@ export default function App() {
       <Rules />
       <Judging />
       <FAQ />
+      <Timeline />
     </div>
   )
 }
