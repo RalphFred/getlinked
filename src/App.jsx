@@ -7,6 +7,8 @@ import FAQ from "./components/FAQ"
 import Timeline from "./components/Timeline"
 import Rewards from "./components/Rewards"
 import Partners from "./components/Partners"
+import Privacy from "./components/Privacy"
+import Footer from "./components/Footer"
 
 export default function App() {
   return(
@@ -20,6 +22,8 @@ export default function App() {
       <Timeline />
       <Rewards />
       <Partners />
+      <Privacy />
+      <Footer />
     </div>
   )
 }

@@ -51,8 +51,8 @@ export default function Judging() {
         </p>
 
         <button className="px-12 py-3 rounded-xl text-base background-gradient font-semibold my-6 font-montserrat w-[200px]">
-            Register
-          </button>
+          Read More
+        </button>
       </div>
     </div>
   );
