@@ -8,7 +8,7 @@ import No6 from "../assets/No6.png";
 
 export default function Timeline() {
   return (
-    <div className="bg-dark-purple text-white px-6 py-12 lg:py-8 lg:px-24">
+    <div className="bg-dark-purple text-white px-6 py-12 lg:py-16 lg:px-24">
       <div className="flex flex-col items-center">
         <h2 className="text-2xl lg:text-4xl font-extrabold font-clash mb-6">
           Timeline
@@ -141,7 +141,7 @@ export default function Timeline() {
         </div>
 
         {/* ------------------------- Desktop Timeline ------------------- */}
-        <div> 
+        <div className="hidden lg:block"> 
           <div className="flex justify-center h-[96px] relative">
             <img src={line} className="absolute top-0 h-[120px]"/>
           </div>

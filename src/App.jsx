@@ -5,6 +5,8 @@ import Rules from "./components/Rules"
 import Judging from "./components/Judging"
 import FAQ from "./components/FAQ"
 import Timeline from "./components/Timeline"
+import Rewards from "./components/Rewards"
+import Partners from "./components/Partners"
 
 export default function App() {
   return(
@@ -16,6 +18,8 @@ export default function App() {
       <Judging />
       <FAQ />
       <Timeline />
+      <Rewards />
+      <Partners />
     </div>
   )
 }
