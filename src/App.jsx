@@ -1,29 +1,23 @@
-import Navbar from "./components/Navbar"
-import Hero from "./components/Hero"
-import Intro from "./components/Intro"
-import Rules from "./components/Rules"
-import Judging from "./components/Judging"
-import FAQ from "./components/FAQ"
-import Timeline from "./components/Timeline"
-import Rewards from "./components/Rewards"
-import Partners from "./components/Partners"
-import Privacy from "./components/Privacy"
-import Footer from "./components/Footer"
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+import Navbar from "./components/Navbar";
+import Home from "./Pages/Home/Home";
+import Register from "./Pages/Register/Register";
+import Contact from "./Pages/Contact/Contact";
 
 export default function App() {
-  return(
+  return (
     <div>
-      <Navbar />
-      <Hero />
-      <Intro />
-      <Rules />
-      <Judging />
-      <FAQ />
-      <Timeline />
-      <Rewards />
-      <Partners />
-      <Privacy />
-      <Footer />
+      <Router>
+        <Navbar />
+
+        <Routes>
+          <Route exact path="/" element={<Home />}/>
+          <Route path="/register" element={<Register />}/>
+          <Route path="/contact" element={<Contact />}/>
+        </Routes>
+        
+      </Router>
     </div>
-  )
+  );
 }

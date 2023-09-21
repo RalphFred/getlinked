@@ -14,7 +14,7 @@ export default function Partners() {
       </div>
 
       <div className='mt-4'>
-        <img src={partners} alt="" />
+        <img src={partners} alt="" className='w-full' />
       </div>
     </div>
   );

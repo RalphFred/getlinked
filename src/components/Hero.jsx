@@ -1,15 +1,12 @@
 import manVR from '../assets/manVR.png';
 import chain from '../assets/chain.png';
-// import flare from '../assets/flare.png';
 
 export default function Hero() {
   return (
     <div className="px-6 py-12 lg:py-8 lg:px-24 text-white bg-dark-purple">
       <div className="font-montserrat font-semibold text-lg lg:text-2xl text-center mb-4 lg:mb-8 lg:text-right">Igniting a Revolution in HR Innovation</div>
 
-      {/* <img src={flare} className='absolute -z-1' /> */}
-
-      <div className="flex flex-col lg:flex-row lg:items-center">
+      <div className="flex flex-col lg:flex-row lg:items-center ">
         <div className='flex flex-col items-center lg:items-start'>
           <p className="font-clash font-extrabold text-3xl lg:text-6xl text-center lg:text-left">getlinkedTech</p>
           <p className="font-clash font-extrabold text-3xl lg:text-6xl flex justify-center lg:justify-start items-center mb-6">
