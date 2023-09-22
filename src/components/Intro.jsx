@@ -1,10 +1,10 @@
-import thebigIdea from "../assets/thebigIdea.png";
+import judging from "../assets/judging.png";
 
 export default function Intro() {
   return (
     <div className="bg-dark-purple text-white px-6 py-12 lg:py-8 lg:px-24 flex flex-col lg:flex-row lg:items-center">
       <div className="pb-10 lg:pb-0 lg:w-2/4 lg:px-12">
-        <img src={thebigIdea} className="w-full"/>
+        <img src={judging} alt="Image" className="w-full" />
       </div>
       <div className="text-center lg:text-left lg:w-2/4 lg:px-12">
         <h2 className="text-2xl lg:text-4xl font-extrabold font-clash mb-6">Introduction to getlinked <br /> <span className="text-lighter-purple">tech Hackathon 1.0</span> </h2>
