@@ -1,4 +1,4 @@
-import thebigIdea from "../assets/thebigIdea.png";
+import thebigIdea from "../assets/thebigIdea.svg";
 
 export default function Intro() {
   return (
