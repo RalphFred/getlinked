@@ -1,4 +1,5 @@
 import rules from "../assets/rules.png";
+import ParallaxImage from "./ParallaxIage";
 
 export default function Rules() {
   return (
@@ -19,7 +20,7 @@ export default function Rules() {
         </p>
       </div>
       <div className="pb-10 lg:pb-0 lg:w-2/4 lg:px-12">
-        <img src={rules} alt="Image" className="w-full" />
+        <ParallaxImage src={rules}/>
       </div>
     </div>
   );

@@ -2,6 +2,8 @@ import { useState } from "react";
 import Frequent from "../assets/FAQ.png";
 import { questions } from "../constants";
 
+import ParallaxImage from "./ParallaxIage";
+
 export default function FAQ() {
   const [openIndex, setOpenIndex] = useState(null);
 
@@ -51,7 +53,7 @@ export default function FAQ() {
         ))}
       </div>
       <div className="pb-10 lg:pb-0 lg:w-2/4 lg:px-12">
-        <img src={Frequent} alt="Image" className="w-full" />
+        <ParallaxImage src={Frequent}/>
       </div>
     </div>
   );

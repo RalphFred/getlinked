@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 export default function Navbar() {
   const [active, setActive] = useState(false);
+  
 
   const handleClick = () => {
     setActive((active) => !active);
@@ -11,8 +12,8 @@ export default function Navbar() {
   };
 
   return (
-    <div>
-      <div className="flex items-center justify-between w-full h-[10vh] lg:h-[15vh] bg-dark-purple text-white p-6 lg:py-6 lg:px-24 relative border-b border-gray-800">
+    <div className="w-full text-white p-6 lg:py-6 lg:px-24 fixed z-[10] backdrop-blur-lg">
+      <div className="flex items-center justify-between ">
         {/*------------------------------ LOGO -----------------------------*/}
         <div className="text-2xl lg:text-3xl font-extrabold font-clash z-[20]">
           <Link to="/">
