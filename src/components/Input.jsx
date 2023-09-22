@@ -1,8 +1,7 @@
 // eslint-disable-next-line react/prop-types
 export default function Input({id, label, type, placeholder, errorMessage, register}) {
   return (
-    <div className="flex flex-col mb-2">
-      <div className="flex flex-col mb-2">
+      <div className="flex flex-col mb-2 w-full">
         <label htmlFor={id} className="font mb-1">
           {label}
         </label>
@@ -14,6 +13,5 @@ export default function Input({id, label, type, placeholder, errorMessage, regis
         />
         <span className="text-red-500 text-sm font">{errorMessage}</span>
       </div>
-    </div>
   );
 }
