@@ -5,12 +5,82 @@
 @tailwind components;
 @tailwind utilities;
 
+body{
+  overflow-x: hidden;
+}
+
+
 .background-gradient {
   background-image: linear-gradient(to right, #FE34B9, #D434FE, #903AFF);
-  background-size: 150% 100%; /* Increase the size to create a transition effect */
+  background-size: 200% 100%; /* Increase the size to create a transition effect */
   transition: background-position .5s ease-in-out; /* Transition the background-position */
 }
 
 .background-gradient:hover {
-  background-position: 100% 0; /* Change the background position on hover */
+  background-position: right center; 
+}
+
+/* -------------------------- Rotate Animation --------------------------- */
+.rotate-me {
+  animation: rotate 45s linear infinite; 
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* -------------------------------- SCROLLBAR ------------------------------------- */
+::-webkit-scrollbar {
+  width: 10px;
+  background: #150E28;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom,  #C80089, #8E00B2 , #5C0089);
+  border-radius: 12px;
+}
+
+/* ----------------------------------- PARALLAX -------------------------------------- */
+.parallax-img {
+  --f: 0.1;
+  --r: 10px;
+  --_f: calc(100% * var(--f) / (1 + var(--f)));
+  --_a: calc(90deg * var(--f));
+  width: 400px;
+  aspect-ratio: calc(1 + var(--f));
+  object-fit: cover;
+  clip-path: inset(0 var(--_f) 0 0 round var(--r));
+  transform: perspective(400px) var(--t, rotateY(var(--_a)));
+  animation: parallax 4s linear infinite alternate;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+/* Define the styles for the .is-parallax-active class for the hover effect */
+.parallax-img.is-parallax-active {
+  clip-path: inset(0 0 0 var(--_f) round var(--r));
+  transform: perspective(300px) translateX(calc(-1 * var(--_f))) rotateY(calc(-1 * var(--_a)));
+}
+
+/* Define the keyframes for the parallax animation */
+@keyframes parallax {
+  0% {
+    clip-path: inset(0 var(--_f) 0 0 round var(--r));
+    transform: perspective(400px) translateX(0); /* Center the initial position */
+  }
+  100% {
+    clip-path: inset(0 0 0 var(--_f) round var(--r));
+    transform: perspective(400px) translateX(calc(-1 * var(--_f))) rotateY(calc(-1 * var(--_a)));
+  }
+}
+
+/* ------------------------- AOS Delay --------------------------- */
+.custom-aos-delay {
+  animation-delay: 5.5s !important; /* Adjust the delay as needed */
 }

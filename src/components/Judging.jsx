@@ -1,10 +1,11 @@
 import judging from "../assets/judging.png";
+import ParallaxImage from "./ParallaxIage";
 
 export default function Judging() {
   return (
     <div className="bg-dark-purple text-white px-6 py-12 lg:py-8 lg:px-24 flex flex-col lg:flex-row lg:items-center">
       <div className="pb-10 lg:pb-0 lg:w-2/4 lg:px-12">
-        <img src={judging} alt="Image" className="w-full" />
+        <ParallaxImage src={judging} />
       </div>
       <div className="text-center lg:text-left lg:w-2/4 lg:px-12">
         <h2 className="text-2xl lg:text-4xl font-extrabold font-clash mb-6">
