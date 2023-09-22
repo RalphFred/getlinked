@@ -1,4 +1,4 @@
-import judging from "../assets/judging.png";
+import judging from "../assets/theBigIdea.png";
 
 export default function Intro() {
   return (
