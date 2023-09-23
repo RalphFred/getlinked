@@ -101,8 +101,8 @@ export default function Hero() {
             </p>
 
             <p className="font-montserrat text-center lg:text-left text-xl mb-3">
-              Participate in getlinked tech Hackathon 2023 stand a chance to win
-              a Big prize
+              <AnimatedTitle text="Participate in getlinked tech Hackathon 2023 stand a chance to win a Big prize" />
+              
             </p>
 
             <button className="px-12 py-3 rounded-xl text-xl background-gradient font-semibold my-6 font-montserrat w-[200px]">

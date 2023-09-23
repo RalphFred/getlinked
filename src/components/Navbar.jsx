@@ -23,12 +23,12 @@ export default function Navbar() {
 
         {/* --------------------------- Desktop Navigation Bar-------------------------- */}
         <div className="hidden xl:flex items-center text-lg font-montserrat font-bold">
-          <div className="mx-3 p-2">Timeline</div>
-          <div className="mx-3 p-2">Overview</div>
-          <a href="#FAQ"><div className="mx-3 p-2">FAQs</div></a>
+          <div className="mx-3 p-2 hover:text-light-pink">Timeline</div>
+          <div className="mx-3 p-2 hover:text-light-pink">Overview</div>
+          <div className="mx-3 p-2 hover:text-light-pink">FAQs</div>
           <Link to="/contact">
             <div
-              className={`mx-3 p-2 cursor-pointer hover:text-light-purple ${
+              className={`mx-3 p-2 cursor-pointer hover:text-light-pink ${
                 location.pathname === "/contact" ? "active" : ""
               }`}
             >
@@ -86,11 +86,16 @@ export default function Navbar() {
           <div className="my-4 p-2">Overview</div>
           <div className="my-4 p-2">FAQs</div>
           <Link to="/contact">
-            <div className="my-4 p-2" onClick={handleClick}>Contact</div>
+            <div className="my-4 p-2" onClick={handleClick}>
+              Contact
+            </div>
           </Link>
 
           <Link to="/register">
-            <button className="my-4 px-10 py-5 rounded-xl w-[200px] background-gradient" onClick={handleClick}>
+            <button
+              className="my-4 px-10 py-5 rounded-xl w-[200px] background-gradient"
+              onClick={handleClick}
+            >
               Register
             </button>
           </Link>
