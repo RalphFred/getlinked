@@ -30,7 +30,7 @@ const schema = yup
 
 export default function Form() {
 
-  const [isOpenModal, setIsOpenModal] = useState(true);
+  const [isOpenModal, setIsOpenModal] = useState(false);
 
   const openModal = () => {
     setIsOpenModal(true);
@@ -70,6 +70,8 @@ export default function Form() {
         // Handle any errors that occur during the request
         console.error("Error:", error);
       });
+
+      openModal();
   };
 
   const onSubmit = (data) => {
