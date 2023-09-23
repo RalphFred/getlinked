@@ -15,7 +15,6 @@ export default function App() {
   useEffect(() => {
     // eslint-disable-next-line no-undef
     AOS.init({
-      
     });
   }, []);
   

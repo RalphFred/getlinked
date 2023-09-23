@@ -7,7 +7,7 @@ import location from '../assets/location.svg';
 
 export default function Footer() {
   return (
-    <div className="bg-dark-purple text-white px-6 py-12 lg:py-16 lg:px-24">
+    <div className="bg-dark-purple text-white px-6 py-12 lg:py-16 md:px-24">
       <div className="flex flex-col lg:flex-row justify-between">
         <div className="lg:max-w-[600px]">
           <div className="text-2xl lg:text-3xl font-extrabold font-clash mb-2">
