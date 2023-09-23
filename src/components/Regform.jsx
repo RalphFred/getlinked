@@ -39,8 +39,6 @@ export default function Regform() {
 
   const [isOpenModal, setIsOpenModal] = useState(false);
 
-  console.log(isOpenModal);
-
   const openModal = () => {
     setIsOpenModal(true);
   };
@@ -100,8 +98,8 @@ export default function Regform() {
   return (
     <div className="bg-dark-purple text-white h-screen overflow-hidden flex items-center">
       {isOpenModal && (
-        <div className="fixed inset-0 flex items-center justify-center z-50 font-montserrat backdrop-blur-sm">
-          <div className="px-4 py-8 lg:p-12 rounded-lg shadow-lg font w-[320px]  lg:w-[600px] flex flex-col items-center border-2 backdrop-blur-lg border-lighter-purple">
+        <div className="fixed inset-0 flex items-center justify-center z-50 font-montserrat backdrop-blur-xl">
+          <div className="text-center px-4 py-8 lg:p-12 rounded-lg shadow-lg font w-[320px]  lg:w-[600px] flex flex-col items-center border-2 border-lighter-purple">
             <img src={hurray}/>
 
             <h3 className="font-bold text-xl text-center my-6">Congratulations you have successfully Registered!</h3>
@@ -153,7 +151,7 @@ export default function Regform() {
                   id="phone"
                   label="Phone Number"
                   type="string"
-                  placeholder="example@example.com"
+                  placeholder="234 700 000 0000"
                   errorMessage={errors.phone_number?.message}
                   register={{ ...register("phone_number") }}
                 />

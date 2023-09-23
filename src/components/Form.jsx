@@ -2,8 +2,11 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 
+import { useState } from "react";
+
 import Input from "../components/Input";
 
+import hurray from "../assets/done.svg";
 import flare from "../assets/flare.svg";
 import star from "../assets/star.svg";
 import pustar from "../assets/pustar.svg";
@@ -26,6 +29,17 @@ const schema = yup
   .required();
 
 export default function Form() {
+
+  const [isOpenModal, setIsOpenModal] = useState(true);
+
+  const openModal = () => {
+    setIsOpenModal(true);
+  };
+
+  const closeModal = () => {
+    setIsOpenModal(false);
+  };
+
   const baseUrl = "https://backend.getlinked.ai";
 
   const {
@@ -65,11 +79,28 @@ export default function Form() {
 
   return (
     <div className="h-screen bg-dark-purple text-white flex items-center overflow-hidden relative">
+      {isOpenModal && (
+        <div className="fixed inset-0 flex items-center justify-center z-50 font-montserrat backdrop-blur-xl">
+          <div className="text-center px-4 py-8 lg:p-12 rounded-lg shadow-lg font w-[320px]  lg:w-[600px] flex flex-col items-center border-2 border-lighter-purple">
+            <img src={hurray} className="bg-white rounded-full"/>
+
+            <h3 className="font-bold text-2xl text-center my-6">Your question has been submitted.</h3>
+
+            <p>
+              You should receive an email within 72 hours.
+            </p>
+
+            <button className="px-12 py-3 rounded-xl text-xl background-gradient font-semibold mt-4 font-montserrat w-full lg:w-[200px]" onClick={closeModal}>
+              Back
+            </button>
+          </div>
+        </div>
+      )}
       <img
           src={flare}
           className="absolute judging-flare-animate  rotate-180 opacity-40"
         />
-      <div className="mt-[80px] lg:mt-[100px] p-12 lg:py-8 md:px-24 w-full flex justify-around flex-col lg:flex-row">
+      <div className="mt-[80px] lg:mt-[120px] p-12 lg:py-8 md:px-24 w-full flex justify-around flex-col lg:flex-row">
         <div className="w-full lg:w-2/5 hidden lg:block relative">
         <div className="pulse-effect absolute top-[200px] left-[400px]">
           <img src={star} className="circle"></img>
