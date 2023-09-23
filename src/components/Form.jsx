@@ -80,7 +80,7 @@ export default function Form() {
   };
 
   return (
-    <div className="h-screen bg-dark-purple text-white flex items-center overflow-hidden relative">
+    <div className="h-screen bg-dark-purple text-white flex items-center relative">
       {isOpenModal && (
         <div className="fixed inset-0 flex items-center justify-center z-50 font-montserrat backdrop-blur-xl">
           <div className="text-center px-4 py-8 lg:p-12 rounded-lg shadow-lg font w-[320px]  lg:w-[600px] flex flex-col items-center border-2 border-lighter-purple">
