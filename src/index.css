@@ -1,28 +1,46 @@
-@import url('https://api.fontshare.com/v2/css?f[]=clash-display@400,700,500,600,300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Unica+One&display=swap');
+@import url("https://api.fontshare.com/v2/css?f[]=clash-display@400,700,500,600,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Unica+One&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-body{
+body {
   overflow-x: hidden;
+  scroll-behavior: smooth;
+  cursor: url(./assets/cursor.svg), pointer;
 }
 
-
 .background-gradient {
-  background-image: linear-gradient(to right, #FE34B9, #D434FE, #903AFF);
+  background-image: linear-gradient(to right, #fe34b9, #d434fe, #903aff);
   background-size: 200% 100%; /* Increase the size to create a transition effect */
-  transition: background-position .5s ease-in-out; /* Transition the background-position */
+  transition: background-position 0.5s ease-in-out; /* Transition the background-position */
+}
+
+.active {
+  background: linear-gradient(45deg, #fe34b9, #d434fe, #903aff); /* Define your gradient colors */
+  -webkit-background-clip: text; /* For WebKit/Blink browsers */
+  background-clip: text;
+  color: transparent; /* Make the text color transparent */
+
+  font-size: 21px;
+}
+
+.active-btn{
+  background: transparent;
+}
+
+.active-btn:hover{
+  background: linear-gradient(to right, #fe34b9, #d434fe, #903aff);
 }
 
 .background-gradient:hover {
-  background-position: right center; 
+  background-position: right center;
 }
 
 /* -------------------------- Rotate Animation --------------------------- */
 .rotate-me {
-  animation: rotate 45s linear infinite; 
+  animation: rotate 45s linear infinite;
 }
 
 @keyframes rotate {
@@ -37,18 +55,18 @@ body{
 /* -------------------------------- SCROLLBAR ------------------------------------- */
 ::-webkit-scrollbar {
   width: 10px;
-  background: #150E28;
+  background: #150e28;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(to bottom,  #C80089, #8E00B2 , #5C0089);
+  background: linear-gradient(to bottom, #c80089, #8e00b2, #5c0089);
   border-radius: 12px;
 }
 
 /* ----------------------------------- PARALLAX -------------------------------------- */
 .parallax-img {
-  --f: 0.1;
+  --f: 0.05;
   --r: 10px;
   --_f: calc(100% * var(--f) / (1 + var(--f)));
   --_a: calc(90deg * var(--f));
@@ -59,13 +77,13 @@ body{
   transform: perspective(400px) var(--t, rotateY(var(--_a)));
   animation: parallax 4s linear infinite alternate;
   transition: 0.5s;
-  cursor: pointer;
 }
 
 /* Define the styles for the .is-parallax-active class for the hover effect */
 .parallax-img.is-parallax-active {
   clip-path: inset(0 0 0 var(--_f) round var(--r));
-  transform: perspective(300px) translateX(calc(-1 * var(--_f))) rotateY(calc(-1 * var(--_a)));
+  transform: perspective(300px) translateX(calc(-1 * var(--_f)))
+    rotateY(calc(-1 * var(--_a)));
 }
 
 /* Define the keyframes for the parallax animation */
@@ -76,11 +94,115 @@ body{
   }
   100% {
     clip-path: inset(0 0 0 var(--_f) round var(--r));
-    transform: perspective(400px) translateX(calc(-1 * var(--_f))) rotateY(calc(-1 * var(--_a)));
+    transform: perspective(400px) translateX(calc(-1 * var(--_f)))
+      rotateY(calc(-1 * var(--_a)));
   }
 }
 
-/* ------------------------- AOS Delay --------------------------- */
-.custom-aos-delay {
-  animation-delay: 5.5s !important; /* Adjust the delay as needed */
+/* ------------------------------- Pulse Effect --------------------------------- */
+.pulse-effect {
+  height: 30px;
+  width: 30px;
+  border-radius: 100%;
+  margin: auto;
 }
+
+.circle {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-radius: 100%;
+  opacity: 0.5;
+  animation: pulse 3s ease-out infinite;
+}
+
+.circle:nth-of-type(1) {
+  animation-delay: -0.5s;
+}
+
+.circle:nth-of-type(2) {
+  animation-delay: -1s;
+}
+
+.circle:nth-of-type(3) {
+  animation-delay: -1.5s;
+}
+
+@keyframes pulse {
+  100% {
+    transform: scale(1.75);
+    opacity: 0;
+  }
+}
+
+
+/* --------------------------------- ARROW ANIMATION ------------------------- */
+.shakeme{
+  animation: shake 3s linear infinite;
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-30deg) scale(1.25);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+
+/* ---------------------------------- Flare animations ------------------------------ */
+
+.rules-flare-animate {
+  animation: rules-flare 10s linear infinite;
+}
+
+@keyframes rules-flare {
+  0% {
+    top: -600px;
+    left: -400px
+  }
+  30% {
+    top: 100px;
+    left: 0;
+  }
+  60% {
+    top: -600px;
+    left: 0;
+  }
+  100% {
+    top: -600px;
+    left: -400px
+  }
+}
+
+.judging-flare-animate {
+  animation: judging-flare 10s linear infinite;
+}
+
+@keyframes judging-flare {
+  0% {
+    top: 0;
+    right: 0;
+  }
+  25% {
+    top: 0;
+    right: 100%;
+  }
+  50% {
+    top: 100%;
+    right: 100%;
+  }
+  75% {
+    top: 100%;
+    right: 0;
+  }
+  100% {
+    top: 0;
+    right: 0;
+  }
+}
+
