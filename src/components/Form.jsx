@@ -7,7 +7,6 @@ import { useState } from "react";
 import Input from "../components/Input";
 
 import hurray from "../assets/done.svg";
-import flare from "../assets/flare.svg";
 import star from "../assets/star.svg";
 import pustar from "../assets/pustar.svg";
 import pistar from "../assets/pistar.svg";

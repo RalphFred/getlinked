@@ -2,7 +2,7 @@ import Regform from "../../components/Regform"
 
 export default function Register() {
   return(
-    <div>
+    <div className="h-screen bg-dark-purple">
       <Regform />
     </div>
   )
