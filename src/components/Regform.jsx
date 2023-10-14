@@ -114,7 +114,7 @@ export default function Regform() {
           </div>
         </div>
       )}
-      <div className="mt-[80px] lg:mt-[100px] p-12 lg:py-8 lg:px-24 w-full flex justify-around flex-col lg:flex-row items-center">
+      <div className="mt-[80px] lg:mt-[100px] p-12 lg:py-9 lg:px-24 w-full flex justify-around flex-col lg:flex-row items-center">
         <div className="w-2/5 hidden xl:block">
           <ParallaxImage src={registerIMG} />
         </div>

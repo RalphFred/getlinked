@@ -19,7 +19,7 @@ const Character = styled(motion.span)`
 `;
 
 export default function AnimatedTitle({ text}) {
-// This would normally be passed into this component as a prop!
+
   
   const ctrls = useAnimation();
   

@@ -98,10 +98,6 @@ export default function Form() {
           </div>
         </div>
       )}
-      <img
-          src={flare}
-          className="absolute judging-flare-animate  rotate-180 opacity-40"
-        />
       <div className="mt-[80px] lg:mt-[120px] p-12 lg:py-8 md:px-24 w-full flex justify-around flex-col lg:flex-row">
         <div className="w-full lg:w-2/5 hidden lg:block relative">
         <div className="pulse-effect absolute top-[200px] left-[400px]">
